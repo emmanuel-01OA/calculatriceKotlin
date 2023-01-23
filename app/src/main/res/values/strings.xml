@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CalculatriceV1</string>
+<!--    changement ici du label de l application -->
+    <string name="app_name">CalculatriceV1.0</string>
 </resources>
