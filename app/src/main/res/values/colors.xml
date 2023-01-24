@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 <!--    configuration de couleur -->
-    <color name="blue">#0F55BD</color>
+    <color name="blue">#03A9F4</color>
     <color name="indigo">#062451</color>
+    <color name="red">#F10404</color>
+    <color name="yellow">#F3B809</color>
+    <color name="green">#1CF104</color>
 </resources>

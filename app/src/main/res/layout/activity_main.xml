@@ -17,10 +17,91 @@
        android:id="@+id/editText"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:ems="10"
-       android:gravity="right"
-
+       android:ems="40"
+       android:gravity="right|center"
+       android:background="@color/white"
        android:textSize ="40pt"
        android:inputType="textPersonName"
-       android:text="0" />
+       android:text="0" >
+    </EditText>
+
+    <!-- creation du bouton effacer -->
+   <TableLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+       <TableRow
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           >
+
+           <Button
+               android:id="@+id/bontonplus"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginRight="2dp"
+               android:layout_weight="1"
+               android:background="@color/indigo"
+               android:text="+"
+               android:textSize="10pt"></Button>
+
+           <Button
+               android:id="@+id/bontonmoins"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginRight="2dp"
+               android:layout_weight="1"
+               android:background="@color/indigo"
+               android:text="-"
+               android:textColor="@color/white"
+               android:textSize="10pt"></Button>
+
+           <Button
+               android:id="@+id/bontondiv"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginRight="2dp"
+               android:layout_weight="1"
+               android:background="@color/indigo"
+               android:text="/"
+               android:textSize="10pt"></Button>
+
+           <Button
+               android:id="@+id/bontonMulti"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_weight="1"
+               android:background="@color/green"
+               android:text="X"
+               android:textSize="10pt">
+
+           </Button>
+       </TableRow>
+
+
+       <TableRow
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginTop="3dp"
+
+        >
+
+           <Button
+               android:id="@+id/bontonmod"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_weight="1"
+               android:text="mod"
+               android:background="@color/blue"
+               android:textSize="10pt">
+
+           </Button>
+
+
+
+
+       </TableRow>
+
+   </TableLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
