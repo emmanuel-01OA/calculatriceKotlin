@@ -1,5 +1,8 @@
 <application>
   <component name="FindSettings">
+    <option name="customScope" value="Project 'CalculatriceV1'" />
+    <option name="defaultScopeName" value="Project 'CalculatriceV1'" />
+    <option name="SEARCH_SCOPE" value="Project 'CalculatriceV1'" />
     <mask>*.css</mask>
     <mask>*.html</mask>
     <mask>*.xml</mask>
