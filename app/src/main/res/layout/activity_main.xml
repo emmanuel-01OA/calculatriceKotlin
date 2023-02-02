@@ -1,107 +1,325 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--   modifications effectuées affichage du chiffre 0
-  en haut et a droite -->
-
-<!--   textSize : augmente la taille
-       gravity :   -->
-
-   <EditText
-       android:id="@+id/editText"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:ems="40"
-       android:gravity="right|center"
-       android:background="@color/white"
-       android:textSize ="40pt"
-       android:inputType="textPersonName"
-       android:text="0" >
-    </EditText>
-
-    <!-- creation du bouton effacer -->
-   <TableLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-
-
-       <TableRow
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           >
-
-           <Button
-               android:id="@+id/bontonplus"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginRight="2dp"
-               android:layout_weight="1"
-               android:background="@color/indigo"
-               android:text="+"
-               android:textSize="10pt"></Button>
-
-           <Button
-               android:id="@+id/bontonmoins"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginRight="2dp"
-               android:layout_weight="1"
-               android:background="@color/indigo"
-               android:text="-"
-               android:textColor="@color/white"
-               android:textSize="10pt"></Button>
-
-           <Button
-               android:id="@+id/bontondiv"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginRight="2dp"
-               android:layout_weight="1"
-               android:background="@color/indigo"
-               android:text="/"
-               android:textSize="10pt"></Button>
-
-           <Button
-               android:id="@+id/bontonMulti"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_weight="1"
-               android:background="@color/green"
-               android:text="X"
-               android:textSize="10pt">
-
-           </Button>
-       </TableRow>
-
-
-       <TableRow
-           android:layout_width="wrap_content"
-           android:layout_height="match_parent"
-           android:layout_marginTop="3dp"
-
-        >
-
-           <Button
-               android:id="@+id/bontonmod"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_weight="1"
-               android:text="mod"
-               android:background="@color/blue"
-               android:textSize="10pt">
-
-           </Button>
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="40"
+        android:gravity="right|center"
+        android:background="@color/white"
+        android:textSize ="40pt"
+        android:inputType="textPersonName"
+        android:text="0" >
+    </TextView>
 
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/teal_200"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="16dp"
+        android:id="@+id/buttons_layout"
+        android:layout_height="wrap_content">
 
-       </TableRow>
 
-   </TableLayout>
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_7"
+                android:onClick="nombreSaisie"
+                android:text="7" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_8"
+                android:onClick="nombreSaisie"
+                android:text="8" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_9"
+                android:onClick="nombreSaisie"
+                android:text="9" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/boutonModulo"
+                android:backgroundTint="@color/blue"
+                android:onClick="operationSaisies"
+                android:text="mod" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="8dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/button_eff"
+                android:backgroundTint="@color/orange"
+                android:text="effacer" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_4"
+                android:onClick="nombreSaisie"
+                android:text="4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_5"
+                android:onClick="nombreSaisie"
+                android:text="5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_6"
+                android:onClick="nombreSaisie"
+                android:text="6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/boutonPlus"
+                android:backgroundTint="@color/blue"
+                android:onClick="operationSaisies"
+                android:text="+" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="36dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/boutonMulti"
+                android:backgroundTint="@color/blue"
+                android:onClick="operationSaisies"
+                android:text="×" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_1"
+                android:onClick="nombreSaisie"
+                android:text="1" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_2"
+                android:onClick="nombreSaisie"
+                android:text="2" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:id="@+id/bouton_3"
+                android:onClick="nombreSaisie"
+                android:text="3" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="36dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/boutonMoins"
+                android:backgroundTint="@color/blue"
+                android:onClick="operationSaisies"
+                android:text="-" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/boutonDivision"
+                android:backgroundTint="@color/blue"
+                android:onClick="operationSaisies"
+                android:text="÷" />
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginRight="2dp"
+            android:layout_weight="12">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/boutonPlusMoins"
+                android:backgroundTint="@color/purple_500"
+                android:onClick="nombreSaisie"
+                android:text="+/-" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:onClick="nombreSaisie"
+                android:id="@+id/bouton_0"
+                android:text="0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="11dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/buttonZ"
+                android:backgroundTint="@color/green"
+                android:text="reset" />
+
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="152dp"
+                android:layout_height="72dp"
+                app:cornerRadius="66dp"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:textSize="40dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:id="@+id/button_equals"
+                android:backgroundTint="@color/red"
+                android:textAlignment="center"
+                android:onClick="ResultatS"
+                android:text="=" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

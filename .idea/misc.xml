@@ -6,6 +6,8 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CalculatriceV1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.106" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CalculatriceV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.106" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CalculatriceV1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CalculatriceV1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.146" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/CalculatriceV1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -14,5 +16,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
