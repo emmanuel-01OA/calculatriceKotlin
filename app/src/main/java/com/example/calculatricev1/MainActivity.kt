@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
+    //    parametre du bouton egale
     fun ResultatS(view: View) {
         var Nouvnombre : String = editText.text.toString()
         var resultat = 0
@@ -75,4 +75,13 @@ class MainActivity : AppCompatActivity() {
 
         editText.setText(resultat.toString())
     }
+
+//    parametre du bouton rest
+    fun EffaceTout(view: View) {
+        NouvelleSaisie = true
+
+        editText.setText("")
+
+    }
+
 }

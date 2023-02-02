@@ -294,6 +294,8 @@
                 android:layout_margin="5dp"
                 android:id="@+id/buttonZ"
                 android:backgroundTint="@color/green"
+
+                android:onClick="EffaceTout"
                 android:text="reset" />
 
 
